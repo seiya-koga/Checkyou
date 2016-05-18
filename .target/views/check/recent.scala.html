@@ -1,0 +1,19 @@
+ @(title: String, message: String, entryList: java.util.List[models.entity.Check], page: Integer, maxPage: Integer)
+  @main("hello"){
+  <table>
+  <thead>
+  <div class table-column-first><tr><th>お名前</th></tr></div>
+  <tr><th>診断結果</th></tr>
+  <tr><th>シェア用ページ</th></tr>
+   <tr><th>登録日時</th></tr>
+  <thead>
+        <tbody>
+        @for(el <- entryList){
+        <td>@el.name</td>
+        <td>@el.result</td>
+        <td>@el.created</td>
+        }
+        </tbody>
+
+</table>
+}

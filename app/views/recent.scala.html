@@ -1,0 +1,21 @@
+@(title: String, message: String, entryList: java.util.List[models.entity.Check], page: Integer, maxPage: Integer)
+  @main("hello"){
+<table class="table table-striped table-bordered table-hover ">
+<thead>
+  <tr><th class="table-column-first">お名前</th>
+  <th class="table-column-second">診断結果</th>
+  <th class="table-column-third">シェア用ページ</th>
+  <th class="table-column-fourth">登録日時</th></tr>
+  <thead>
+        <tbody>
+        @for(el <- entryList){
+        <tr><td>@el.name</td>
+        <td>@el.result</td>
+        <td><a href="#">LINK</a>
+        <td>@el.created</td></tr>
+        }
+        </tbody>
+</table>
+<p>@helper.pagenate(page,maxPage)</p>
+
+}
