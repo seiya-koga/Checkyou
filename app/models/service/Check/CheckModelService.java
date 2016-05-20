@@ -54,7 +54,9 @@ public class CheckModelService implements ModelService<Check> {
 			            .findPagingList(LIMIT)
 			            .getPage(pageNum)
 			            .getList());
+
 			}
+
 
 	// 最大ページ数を取得
     public Option<Integer> getMaxPage() {

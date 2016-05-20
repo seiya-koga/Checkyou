@@ -1,0 +1,148 @@
+[0m[[0minfo[0m] [0mLoading project definition from /Users/seiya.koga/App/project[0m
+[0m[[0minfo[0m] [0mSet current project to App (in build file:/Users/seiya.koga/App/)[0m
+[0m[[0minfo[0m] [0mWrote /Users/seiya.koga/App/target/scala-2.10/app_2.10-1.0-SNAPSHOT.pom[0m
+[0m[[0minfo[0m] [0m:: delivering :: app#app_2.10;1.0-SNAPSHOT :: 1.0-SNAPSHOT :: integration :: Thu May 19 16:32:05 JST 2016[0m
+[0m[[0minfo[0m] [0m	delivering ivy file to /Users/seiya.koga/App/target/scala-2.10/ivy-1.0-SNAPSHOT.xml[0m
+[0m[[0minfo[0m] [0mMain Scala API documentation to /Users/seiya.koga/App/target/scala-2.10/api...[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources and 4 Java sources to /Users/seiya.koga/App/target/scala-2.10/classes...[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:39: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:643: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.AdminCrudController.logout(), HandlerDef(this, "controllers.crud.AdminCrudController", "logout", Seq(), "GET", """""", _prefix + """crud/logout""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0mGET     /crud/logout                controllers.crud.AdminCrudController.logout()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:649: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.AdminCrudController.authenticate(), HandlerDef(this, "controllers.crud.AdminCrudController", "authenticate", Seq(), "POST", """""", _prefix + """crud/login""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:38: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/login                 controllers.crud.AdminCrudController.authenticate()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:655: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.AdminCrudController.login(), HandlerDef(this, "controllers.crud.AdminCrudController", "login", Seq(), "GET", """</routes path="app/controllers/crud/Top">[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:37: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/login                 controllers.crud.AdminCrudController.login()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:671: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.TopCrudController.index(), HandlerDef(this, "controllers.crud.TopCrudController", "index", Seq(), "GET", """</routes path="app/controllers/crud/CheckCrudController">[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:32: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud                      controllers.crud.TopCrudController.index()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:696: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.delete(id), HandlerDef(this, "controllers.crud.CheckCrudController", "delete", Seq(classOf[Long]), "POST", """""", _prefix + """crud/check/delete/$id<[^/]+>""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:702: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.create(), HandlerDef(this, "controllers.crud.CheckCrudController", "create", Seq(), "POST", """""", _prefix + """crud/check/create""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:708: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.update(id), HandlerDef(this, "controllers.crud.CheckCrudController", "update", Seq(classOf[Long]), "POST", """""", _prefix + """crud/check/update/$id<[^/]+>""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:28: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/delete/:id    controllers.crud.CheckCrudController.delete(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:714: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]), "GET", """<routes path="app/controllers/crud/CheckCrudController">""", _prefix + """crud/check/index""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:24: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/create        controllers.crud.CheckCrudController.create()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:720: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.search(), HandlerDef(this, "controllers.crud.CheckCrudController", "search", Seq(), "GET", """""", _prefix + """crud/check/search""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:26: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/update/:id    controllers.crud.CheckCrudController.update(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_reverseRouting.scala:726: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m   controllers.crud.CheckCrudController.view(id), HandlerDef(this, "controllers.crud.CheckCrudController", "view", Seq(classOf[Long]), "GET", """""", _prefix + """crud/check/view/$id<[^/]+>""")[0m
+[0m[[31merror[0m] [0m                    ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:18: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/index         controllers.crud.CheckCrudController.index(page:java.lang.Integer = 1)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:29: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/search        controllers.crud.CheckCrudController.search()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:23: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/view/:id      controllers.crud.CheckCrudController.view(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:18: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/index         controllers.crud.CheckCrudController.index(page:java.lang.Integer = 1)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:217: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]),"GET", """<routes path="app/controllers/crud/CheckCrudController">""", Routes.prefix + """crud/check/index"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:19: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/index/        controllers.crud.CheckCrudController.index(page:java.lang.Integer = 1)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:225: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]),"GET", """""", Routes.prefix + """crud/check/index/"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:233: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]),"GET", """""", Routes.prefix + """crud/check/index/$page<[^/]+>"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:20: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/index/:page   controllers.crud.CheckCrudController.index(page:java.lang.Integer)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:241: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]),"GET", """""", Routes.prefix + """crud/check"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:21: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check               controllers.crud.CheckCrudController.index(page:java.lang.Integer = 1)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:249: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.index(page), HandlerDef(this, "controllers.crud.CheckCrudController", "index", Seq(classOf[java.lang.Integer]),"GET", """""", Routes.prefix + """crud/check/"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:22: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/              controllers.crud.CheckCrudController.index(page:java.lang.Integer = 1)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:257: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.view(id), HandlerDef(this, "controllers.crud.CheckCrudController", "view", Seq(classOf[Long]),"GET", """""", Routes.prefix + """crud/check/view/$id<[^/]+>"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:23: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/view/:id      controllers.crud.CheckCrudController.view(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:265: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.create(), HandlerDef(this, "controllers.crud.CheckCrudController", "create", Nil,"POST", """""", Routes.prefix + """crud/check/create"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:24: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/create        controllers.crud.CheckCrudController.create()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:273: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.create(), HandlerDef(this, "controllers.crud.CheckCrudController", "create", Nil,"GET", """""", Routes.prefix + """crud/check/create"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:25: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/create        controllers.crud.CheckCrudController.create()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:281: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.update(id), HandlerDef(this, "controllers.crud.CheckCrudController", "update", Seq(classOf[Long]),"POST", """""", Routes.prefix + """crud/check/update/$id<[^/]+>"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:26: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/update/:id    controllers.crud.CheckCrudController.update(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:289: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.update(id), HandlerDef(this, "controllers.crud.CheckCrudController", "update", Seq(classOf[Long]),"GET", """""", Routes.prefix + """crud/check/update/$id<[^/]+>"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:27: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/update/:id    controllers.crud.CheckCrudController.update(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:297: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.delete(id), HandlerDef(this, "controllers.crud.CheckCrudController", "delete", Seq(classOf[Long]),"POST", """""", Routes.prefix + """crud/check/delete/$id<[^/]+>"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:305: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.CheckCrudController.search(), HandlerDef(this, "controllers.crud.CheckCrudController", "search", Nil,"GET", """""", Routes.prefix + """crud/check/search"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:313: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.TopCrudController.index(), HandlerDef(this, "controllers.crud.TopCrudController", "index", Nil,"GET", """</routes path="app/controllers/crud/CheckCrudController">[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:28: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/check/delete/:id    controllers.crud.CheckCrudController.delete(id:Long)[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:322: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.TopCrudController.index(), HandlerDef(this, "controllers.crud.TopCrudController", "index", Nil,"GET", """""", Routes.prefix + """crud/"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:29: object CheckCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/check/search        controllers.crud.CheckCrudController.search()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:330: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.AdminCrudController.login(), HandlerDef(this, "controllers.crud.AdminCrudController", "login", Nil,"GET", """</routes path="app/controllers/crud/Top">[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:340: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.AdminCrudController.authenticate(), HandlerDef(this, "controllers.crud.AdminCrudController", "authenticate", Nil,"POST", """""", Routes.prefix + """crud/login"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:32: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud                      controllers.crud.TopCrudController.index()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/target/scala-2.10/src_managed/main/routes_routing.scala:348: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0m        invokeHandler(controllers.crud.AdminCrudController.logout(), HandlerDef(this, "controllers.crud.AdminCrudController", "logout", Nil,"GET", """""", Routes.prefix + """crud/logout"""))[0m
+[0m[[31merror[0m] [0m                                       ^[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:33: object TopCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/                     controllers.crud.TopCrudController.index()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:37: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/login                 controllers.crud.AdminCrudController.login()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:38: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mPOST    /crud/login                 controllers.crud.AdminCrudController.authenticate()[0m
+[0m[[31merror[0m] [0m/Users/seiya.koga/App/conf/routes:39: object AdminCrudController is not a member of package controllers.crud[0m
+[0m[[31merror[0m] [0mGET     /crud/logout                controllers.crud.AdminCrudController.logout()[0m
+[0m[[31merror[0m] [0m27 errors found[0m
+[0m[[0minfo[0m] [0mNo documentation generated with unsucessful compiler run[0m
+[0m[[31merror[0m] [0m27 errors found[0m
+[0m[[31merror[0m] [0m(compile:[31mdoc[0m) Scaladoc generation failed[0m
+[0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m
+[0m[[31merror[0m] [0mTotal time: 7 s, completed 2016/05/19 16:32:11[0m

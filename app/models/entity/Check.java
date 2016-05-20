@@ -26,6 +26,47 @@ public class Check extends Model {
 	@Constraints.Required
 	public String result;
 
+	public Long getId() {
+		return id;
+	}
+
+	 public void setID(Long id) {
+	 	this.id = id;
+	 }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+	public Date getCreated() {
+		return created;
+	}
+
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+
+	public Date getModified() {
+		return modified;
+	}
+
+	public void setModified(Date modified) {
+		this.modified = modified;
+	}
+
+
 	@Formats.DateTime(pattern = "yyyy/MM/dd")
 	public Date created;
 
@@ -91,5 +132,10 @@ public class Check extends Model {
         // 要実装
         // CheckModelServiceのgetMaxPage呼び出し。最大ページ数取得できない場合、valueを返す
     }
+
+	public void setId(Long id2) {
+		// TODO 自動生成されたメソッド・スタブ
+		this.id = id2;
+	}
 
 }

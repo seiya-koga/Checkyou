@@ -1,13 +1,18 @@
 package controllers;
 
 import play.mvc.*;
-
 import utils.ConfigUtil;
+import utils.OptionUtil;
 import views.html.*;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.Cookie;
 
 import models.entity.*;
 import models.service.Check.CheckModelService;
@@ -18,16 +23,20 @@ import models.request.Check.ResultPostRequest;
 
 public class ChecksController extends Application {
 
-	public static Result index() {
+	public static Result index() throws UnsupportedEncodingException {
+		session("sessionText", "せっしょん");
+		response().setCookie("myName",URLEncoder.encode("くっきー", "UTF-8"));
+
 		// 要実装
 		// 文字列は、application.confで設定したcheckyou.setting.message.title、checkyou.setting.message.questionを渡す
 		String title = ConfigUtil.get("checkyou.setting.message.title").get();
 		String message = ConfigUtil.get("checkyou.setting.message.question").get();
 
-		return ok(index.render(title, message, new Form(ResultPostRequest.class)));
+		return ok(index.render(title, message, new Form<ResultPostRequest>(ResultPostRequest.class)));
 	}
 
-	public static Result result() {
+	public static Result result() throws UnsupportedEncodingException {
+
 		Form<ResultPostRequest> form = Form.form(ResultPostRequest.class).bindFromRequest();
 
 		// バリデーションチェック
@@ -51,7 +60,12 @@ public class ChecksController extends Application {
 		String result = check.result().get();
 		Check check1 = new Check(name, result);
 		check1.save();
-		return ok(views.html.result.render("title", check1));
+		Option<String> mySession = OptionUtil.apply(session("sessionText"));
+		String cookie = URLDecoder.decode(request().cookie("myName").value(),"UTF-8");
+
+
+		String title = mySession.get() + ConfigUtil.get("checkyou.setting.message.resultTitle").getOrElse("") + cookie;
+		return ok(views.html.result.render(title,check1));
 	}
 
 	// バリデーションエラーメッセージを表示し、トップページへ戻る
