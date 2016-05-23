@@ -46,5 +46,25 @@ public class ChecksControllerIntegrationTest {
       // 要実装
       // 「Twitter id形式ではありません」文言の確認内容がよくわからないため、これだけ記載
       // assertThat(browser.$(".error strong").getText()).contains("Twitter id形式ではありません");
+    	 Map<String, String> map = new HashMap<String, String>();
+         map.put("checkYou.setting.message.failCheck", "診断に失敗しました");
+         map.put("checkYou.setting.message.resultTitle", "さんの診断結果");
+         map.putAll(inMemoryDatabase());
+
+         running(testServer(3333, fakeApplication(map)), HTMLUNIT, new F.Callback<TestBrowser>() {
+             public void invoke(TestBrowser browser) {
+                 FakeApp.initDb();
+                 // 下記のURLに移動
+                 browser.goTo("http://localhost:3333");
+                 // id属性「name」インプットに「test_t」を入力
+                 browser.fill("#name").with("test_t");
+                 // id属性「checkYourName」というボタンをを押す
+                 browser.$("#checkYourName").submit();
+
+                 // $メソッドの引数はresult.scala.html参照
+                 assertThat(browser.$(".error strong").getText()).contains("Twitter id形式ではありません");
+             }
+         });
     }
+
 }

@@ -29,12 +29,19 @@ public class CheckModelServiceTest extends FakeApp {
 	public void testFindByIdTo2ReturnSome() throws Exception {
 		Ebean.execute(Ebean.createSqlUpdate(
 				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('1',  'test_t',  'test_tさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:56', '2013-08-20 12:34:56');"));
-		Option<Check> model = new CheckModelService().findById(2L);
+		Option<Check> model = new CheckModelService().findById(3L);
 		assertThat(model.getClass()).isEqualTo(None.class);
 	}
 
 	// 要実装
 	// 異常系（None）：1件のレコードから検索のキーとしてnullを渡す
+	@Test
+	public void testFindByIdTo3ReturnSome() throws Exception {
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('1',  'test_t',  'test_tさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:56', '2013-08-20 12:34:56');"));
+		Option<Check> model = new CheckModelService().findById(null);
+		assertThat(model.getClass()).isEqualTo(None.class);
+	}
 
 	// 要実装
 	// OKケース
@@ -68,35 +75,26 @@ public class CheckModelServiceTest extends FakeApp {
 		assertThat(result.get().get(0).getId()).isEqualTo(1L);
 		assertThat(result.get().get(4).getId()).isEqualTo(5L);
 	}
-	//
-	// // 要実装（Some型、件数、ID=6Lを確認）
-	// // ページ2に1件存在し、Idが6が存在している
-	// @Test
-	// public void testFindWithPage2Contains1And5() throws Exception {
-	// prepareSaveData();
-	// Option<List<Check>> result = new CheckModelService().findWithPage(2);
-	// assertThat(result.getClass()).isEqualTo(Some.class);
-	// assertThat(result.get().size()).isEqualTo(1);
-	// assertThat(result.get().get(0).getId()).isEqualTo(1L);
-	// }
+
+ // 要実装（Some型、件数、ID=6Lを確認）
+ // ページ2に1件存在し、Idが6が存在している
+ @Test
+ public void testFindWithPage2Contains1And5() throws Exception {
+ prepareSaveData();
+ Option<List<Check>> result = new CheckModelService().findWithPage(2);
+ assertThat(result.getClass()).isEqualTo(Some.class);
+ assertThat(result.get().size()).isEqualTo(1);
+ assertThat(result.get().get(0).getId()).isEqualTo(6L);
+ }
 
 	// 要実装
 	// ページ3は存在しない
-
-	public static void prepareSaveData() {
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('1',  'test_a',  'test_aさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:11', '2013-08-20 12:34:56');"));
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('2',  'test_b',  'test_bさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:12', '2013-08-20 12:34:56');"));
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('3',  'test_c',  'test_cさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:13', '2013-08-20 12:34:56');"));
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('4',  'test_d',  'test_dさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:14', '2013-08-20 12:34:56');"));
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('5',  'test_e',  'test_eさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:15', '2013-08-20 12:34:56');"));
-		Ebean.execute(Ebean.createSqlUpdate(
-				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('6',  'test_f',  'test_fさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:16', '2013-08-20 12:34:56');"));
-	}
+ @Test
+ public void testFindWithPage3() throws Exception {
+ prepareSaveData();
+ Option<List<Check>> result = new CheckModelService().findWithPage(3);
+ assertThat(result.getClass()).isEqualTo(None.class);
+ }
 
 	// 要実装
 	// 1件しかデータがない場合、MaxPageは1（Option型、ページ数確認）
@@ -117,10 +115,35 @@ public class CheckModelServiceTest extends FakeApp {
 	@Test
 	public void testGetMaxPageIsZero() throws Exception {
 		Option<Integer> result = new CheckModelService().getMaxPage();
-		assertThat(result.getClass()).isEqualTo(Some.class);
-		assertThat(result.get()).isEqualTo(0);
+		assertThat(result.getClass()).isEqualTo(None.class);
 	}
 
 	// 要実装
 	// 6件データがある場合はMaxPageは2（Option型、ページ数確認）
+	@Test
+	public void testGetMaxPageIs2() throws Exception {
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('1',  'test_t',  'test_tさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:56', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('5',  'test_t',  'test_tさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:56', '2013-08-20 12:34:56');"));
+		Option<Integer> result = new CheckModelService().getMaxPage();
+		assertThat(result.getClass()).isEqualTo(Some.class);
+		assertThat(result.get()).isEqualTo(2);
+
+	}
+
+	public static void prepareSaveData() {
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('1',  'test_a',  'test_aさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:11', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('2',  'test_b',  'test_bさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:12', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('3',  'test_c',  'test_cさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:13', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('4',  'test_d',  'test_dさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:14', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('5',  'test_e',  'test_eさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:15', '2013-08-20 12:34:56');"));
+		Ebean.execute(Ebean.createSqlUpdate(
+				"INSERT INTO  `check` (`id`, `name`, `result`, `created`, `modified`) VALUES ('6',  'test_f',  'test_fさんにオススメなPlay frameworkのバージョンは、2.1.3 Javaです。',  '2013-08-20 12:34:16', '2013-08-20 12:34:56');"));
+	}
 }
